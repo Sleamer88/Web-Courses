@@ -64,6 +64,9 @@
 
     <hr>
 
+    <!-- If I wanted to insert a line break I could do <br> and if I wanted more I could do
+    br*x, where x is an integer and the br will be repeated x times-->
+
     <section id="vacation">
 
         <h2>I Am Also Planning a Vacation</h2>
@@ -87,14 +90,22 @@
         <ul>
             <li>
                 <p>I've heard good things about the Caribbean.</p>
-                <img src="img/caribbean.jpg" alt="Caribbean Beach"
-                     title="I want to visit a Caribbean beach" width="400" height="225"
-                loading="lazy"> <!-- For the loading attribute, the default is eager, therefore
+                <figure>
+                    <img src="img/caribbean.jpg" alt="Caribbean Beach"
+                         title="I want to visit a Caribbean beach" width="400" height="225"
+                    loading="lazy"> <!-- For the loading attribute, the default is eager, therefore
                  if nothing is provided the image is eagerly loaded.
                  In order to improve performance of the webpage, any image which is under the fold
                  (the fold is the point in the webpage where the other elements are not seen,
                  for example when you load the page the images which you need to scroll in order
                  to see are under the fold) should be loaded using the lazy attribute-->
+                    <figcaption>
+                        Caribbean Beach Getaway
+                    </figcaption> <!-- The figcaption block tells the browser and assistive technology
+                     that this text directly relates to the image, if we use a paragraph instead it still
+                     might look okay but the browser or assistive technology will not know that it is
+                     meant to relate directly to the image-->
+                </figure> <!-- The figure block indents the image-->
             </li>
             <li>
                 <p>I've heard good things about going here:</p>
