@@ -88,7 +88,13 @@
             <li>
                 <p>I've heard good things about the Caribbean.</p>
                 <img src="img/caribbean.jpg" alt="Caribbean Beach"
-                     title="I want to visit a Caribbean beach" width="400" height="225">
+                     title="I want to visit a Caribbean beach" width="400" height="225"
+                loading="lazy"> <!-- For the loading attribute, the default is eager, therefore
+                 if nothing is provided the image is eagerly loaded.
+                 In order to improve performance of the webpage, any image which is under the fold
+                 (the fold is the point in the webpage where the other elements are not seen,
+                 for example when you load the page the images which you need to scroll in order
+                 to see are under the fold) should be loaded using the lazy attribute-->
             </li>
             <li>
                 <p>I've heard good things about going here:</p>
