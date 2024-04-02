@@ -13,7 +13,7 @@
     <header>
         <h1>My Goals for the Year</h1>
 
-        <nav>
+        <nav aria-label="primary-navigation">
             <ul>
                 <li>
                     <a href="#html">Learning HTML</a>
@@ -21,15 +21,19 @@
                 <li>
                     <a href="#vacation">Planning a Vacation</a>
                 </li>
-            </ul>
-        </nav>
+            </ul> <!-- This is also semantic HTML-->
+        </nav> <!-- This is also semantic HTML, and there can be multiple nav headers per webpage
+        (These usually also exist in the footers), if there are multiple nav elements it is very
+        important to label them in order to keep them separate with aria-label-"" however if you use
+        a subtitle within the nav you can give it an ID and use aria-labelledby="same id as heading" in
+        order to semantically link these together-->
     </header> <!-- This adds semantic meaning to the HTML page, there can be multiple headers
      and the <hr> line was removed due to the header block-->
 
     <hr>
 
     <main>
-        <section id="html">
+        <article id="html">
             <h2>I'm Ready to Learn HTML</h2>
             <p>This is my first web page.</p>
             <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5"
@@ -72,14 +76,15 @@
                 </ol>
             <!-- Don't put anything important inside abbreviations since they do not get displayed to the user at the end-->
             <!-- white space collapsing, if I add more spaces after it will have no effect on the webpage itself -->
-        </section>
+        </article> <!-- This is more appropriate than <section></section> because it clearly has its
+        own topic, thus it is more like an article-->
 
         <hr>
 
         <!-- If I wanted to insert a line break I could do <br> and if I wanted more I could do
         br*x, where x is an integer and the br will be repeated x times-->
 
-        <section id="vacation">
+        <article id="vacation">
 
             <h2>I Am Also Planning a Vacation</h2>
             <p>I've been working hard and <em>really need a getaway</em>.</p>
@@ -156,9 +161,9 @@
             </dl>
 
             <p>Anywhere cold. <strong>No way!</strong></p>
-        </section>
+        </article>
     </main> <!-- There can only be a single main section per page which is obvious, this usually
-     encloses the sections of the webpage-->
+     encloses the sections of the webpage (semantic HTML)-->
 
     <hr>
 
@@ -166,7 +171,8 @@
 
         <p>
             &lt;&lt;&lt; &copy; <a href="about.html"> Roberto Stoica </a> &gt;&gt;&gt;
-        </p>
+        </p> <!-- Adding this inside of a paragraph is not necessary, but may help with CSS
+        formatting in the future-->
 
         <!--Link to text rules:
          Avoid printing the full web address to the page e.g. https://google.com or www.google.com just describe the place you are taking the user
@@ -178,7 +184,7 @@
             <a href="#">Back to Top</a>
         </p>
 
-    </footer> <!-- Used in the same way as the header-->
+    </footer> <!-- Used in the same way as the header (Semantic HTML)-->
 
 </body>
 </html>
