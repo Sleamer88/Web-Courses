@@ -93,39 +93,45 @@
                     the main sections or article-->
                     <br>
                     <table>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
-                            </td>
-                            <td>Write Code</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
-                            </td>
-                            <td>Eat Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
-                            </td>
-                            <td>Study for Other Courses</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">All Other Times</td> <!-- rowspan="x" where x is an integer
-                            allows for a table data input to span x number of rows. e.g. <td rowspan="2">
-                            .... </td>-->
-                            <td>Free Time</td> <!-- colspan="x" where x is an integer
-                            allows for a table data input to span x number of columns.
-                            e.g. <td colspan="2"> .... </td>-->
-                        </tr>
-                        <tr>
-                            <td>Sleep</td>
-                        </tr>
+                        <caption>My Daily Schedule</caption> <!-- The caption block automatically
+                        spans all columns of a table-->
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+                                </td>
+                                <td>Write Code</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
+                                </td>
+                                <td>Eat Lunch</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
+                                </td>
+                                <td>Study for Other Courses</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">All Other Times</td> <!-- rowspan="x" where x is an integer
+                                allows for a table data input to span x number of rows. e.g. <td rowspan="2">
+                                .... </td>-->
+                                <td>Free Time</td> <!-- colspan="x" where x is an integer
+                                allows for a table data input to span x number of columns.
+                                e.g. <td colspan="2"> .... </td>-->
+                            </tr>
+                            <tr>
+                                <td>Sleep</td>
+                            </tr>
+                        </tbody>
                     </table> <!-- Something to note about tables is that they do not automatically expand
                     with the page as other elements, therefore as the padding for other elements is the page
                     itself, as soon as the table ends its padding begins-->
