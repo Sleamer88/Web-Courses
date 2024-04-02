@@ -98,34 +98,38 @@
                         <thead>
                             <tr>
                                 <th>&nbsp;</th>
-                                <th>Time</th>
-                                <th>Activity</th>
+                                <th scope="col">Time</th> <!-- A scope must be defined for every
+                                table head with text inside of it with either col, colgroup, row,
+                                rowgroup-->
+                                <th scope="col">Activity</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>Morning</th>
-                                <td>
+                                <th scope="row">Morning</th>
+                                <td> <!-- Another way of doing scope is to add
+                                an id to each header e.g. <th id="time>Time</th> and <th id="morning">Morning<?th
+                                then inside the body for each data cell we do <td headers="time morning">...</td>>-->
                                     <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
                                 </td>
                                 <td>Write Code</td>
                             </tr>
                             <tr>
-                                <th>Break</th>
+                                <th scope="row">Break</th>
                                 <td>
                                     <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
                                 </td>
                                 <td>Eat Lunch</td>
                             </tr>
                             <tr>
-                                <th>Afternoon</th>
+                                <th scope="row">Afternoon</th>
                                 <td>
                                     <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
                                 </td>
                                 <td>Study for Other Courses</td>
                             </tr>
                             <tr>
-                                <th>Evening</th>
+                                <th scope="row">Evening</th>
                                 <td rowspan="2">All Other Times</td> <!-- rowspan="x" where x is an integer
                                 allows for a table data input to span x number of rows. e.g. <td rowspan="2">
                                 .... </td>-->
@@ -134,7 +138,7 @@
                                 e.g. <td colspan="2"> .... </td>-->
                             </tr>
                             <tr>
-                                <th>Night</th>
+                                <th scope="row">Night</th>
                                 <td>Sleep</td>
                             </tr>
                         </tbody>
