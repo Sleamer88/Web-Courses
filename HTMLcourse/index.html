@@ -23,138 +23,141 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> <!-- This adds semantic meaning to the HTML page, there can be multiple headers
+     and the <hr> line was removed due to the header block-->
 
     <hr>
 
-    <section id="html">
-        <h2>I'm Ready to Learn HTML</h2>
-        <p>This is my first web page.</p>
-        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5"
-        width="300" height="300"> <!-- It is required to provide width and height because
-         of Cumulative Layout Shift, it prevents the image from moving by itself on the webpage
-         e.g. if a user wanted to click the image but clicks something else due to C.L.S
-         If we don't provide these details, the browser shifts everything once it figures
-         out the size of the image-->
-        <figure>
-            <figcaption>
-                An Example of HTML5 code
-            </figcaption> <!-- The figcaption block is either the first or last thing inside a figure -->
-            <p>
-                <code>
-                    &lt;h1&gt;Hello World!&lt;/h1&gt;
-                </code> <!-- This element helps you to display code, and we have to use entities
-                instead of blocks in order to avoid confusing the HTML interpreter-->
-            </p>
-        </figure>
-        <dl>
-            <dt>I used this tutorial:</dt>
-            <dd><a href="https://www.youtube.com/watch?v=kUMe1FH4CHE">Learn HTML – Full Tutorial for Beginners (2022)</a></dd>
-        </dl>
+    <main>
+        <section id="html">
+            <h2>I'm Ready to Learn HTML</h2>
+            <p>This is my first web page.</p>
+            <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5"
+            width="300" height="300"> <!-- It is required to provide width and height because
+             of Cumulative Layout Shift, it prevents the image from moving by itself on the webpage
+             e.g. if a user wanted to click the image but clicks something else due to C.L.S
+             If we don't provide these details, the browser shifts everything once it figures
+             out the size of the image-->
+            <figure>
+                <figcaption>
+                    An Example of HTML5 code
+                </figcaption> <!-- The figcaption block is either the first or last thing inside a figure -->
+                <p>
+                    <code>
+                        &lt;h1&gt;Hello World!&lt;/h1&gt;
+                    </code> <!-- This element helps you to display code, and we have to use entities
+                    instead of blocks in order to avoid confusing the HTML interpreter-->
+                </p>
+            </figure>
+            <dl>
+                <dt>I used this tutorial:</dt>
+                <dd><a href="https://www.youtube.com/watch?v=kUMe1FH4CHE">Learn HTML – Full Tutorial for Beginners (2022)</a></dd>
+            </dl>
 
-        <h3>My Daily Schedule</h3>
-        <p>Let me tell you how:
-            <br>&nbsp;&nbsp;&nbsp;...I learn more about web dev.
-            <br>&nbsp;&nbsp;&nbsp;...I plan out my schedule.
-            <br>&nbsp;&nbsp;&nbsp;...I use resources from <abbr
-            title="Mozilla Developer Network">MDN</abbr>.
+            <h3>My Daily Schedule</h3>
+            <p>Let me tell you how:
+                <br>&nbsp;&nbsp;&nbsp;...I learn more about web dev.
+                <br>&nbsp;&nbsp;&nbsp;...I plan out my schedule.
+                <br>&nbsp;&nbsp;&nbsp;...I use resources from <abbr
+                title="Mozilla Developer Network">MDN</abbr>.
+                <!-- Don't put anything important inside abbreviations since they do not get displayed to the user at the end-->
+            <p>Schedule, Ordered List Version</p>
+                <ol>
+                    <li>...I learn more about web dev.</li>
+                    <li>...I plan out my schedule.</li>
+                    <li>...I use resources from <abbr
+                    title="Mozilla Developer Network">
+                        <a href="https://developer.mozilla.org">MDN</a>
+                    </abbr>.</li>
+                </ol>
             <!-- Don't put anything important inside abbreviations since they do not get displayed to the user at the end-->
-        <p>Schedule, Ordered List Version</p>
-            <ol>
-                <li>...I learn more about web dev.</li>
-                <li>...I plan out my schedule.</li>
-                <li>...I use resources from <abbr
-                title="Mozilla Developer Network">
-                    <a href="https://developer.mozilla.org">MDN</a>
-                </abbr>.</li>
-            </ol>
-        <!-- Don't put anything important inside abbreviations since they do not get displayed to the user at the end-->
-        <!-- white space collapsing, if I add more spaces after it will have no effect on the webpage itself -->
-    </section>
+            <!-- white space collapsing, if I add more spaces after it will have no effect on the webpage itself -->
+        </section>
 
-    <hr>
+        <hr>
 
-    <!-- If I wanted to insert a line break I could do <br> and if I wanted more I could do
-    br*x, where x is an integer and the br will be repeated x times-->
+        <!-- If I wanted to insert a line break I could do <br> and if I wanted more I could do
+        br*x, where x is an integer and the br will be repeated x times-->
 
-    <section id="vacation">
+        <section id="vacation">
 
-        <h2>I Am Also Planning a Vacation</h2>
-        <p>I've been working hard and <em>really need a getaway</em>.</p>
-        <p>I live in <abbr title="Amsterdam">Ams</abbr>, so I want to visit a beach.</p>
+            <h2>I Am Also Planning a Vacation</h2>
+            <p>I've been working hard and <em>really need a getaway</em>.</p>
+            <p>I live in <abbr title="Amsterdam">Ams</abbr>, so I want to visit a beach.</p>
 
-        <h3>Places I'd Like to Visit</h3>
+            <h3>Places I'd Like to Visit</h3>
 
-        <p>I've heard good things about the Caribbean.</p>
-        <p>I've heard good things about going here:</p>
-        <address>
-            Margaritaville Island Reserve Riviera
-            Cancún<br>
-            Bahia Petempich Puerto Morelos,
-            Mexico<br>
-            Colonia Morelos, México 77580
-        </address>
+            <p>I've heard good things about the Caribbean.</p>
+            <p>I've heard good things about going here:</p>
+            <address>
+                Margaritaville Island Reserve Riviera
+                Cancún<br>
+                Bahia Petempich Puerto Morelos,
+                Mexico<br>
+                Colonia Morelos, México 77580
+            </address>
 
-        <p>To Visit, List version</p>
+            <p>To Visit, List version</p>
 
-        <ul>
-            <li>
-                <p>I've heard good things about the Caribbean.</p>
-                <figure>
-                    <img src="img/caribbean.jpg" alt="Caribbean Beach"
-                         title="I want to visit a Caribbean beach" width="400" height="225"
-                    loading="lazy"> <!-- For the loading attribute, the default is eager, therefore
-                 if nothing is provided the image is eagerly loaded.
-                 In order to improve performance of the webpage, any image which is under the fold
-                 (the fold is the point in the webpage where the other elements are not seen,
-                 for example when you load the page the images which you need to scroll in order
-                 to see are under the fold) should be loaded using the lazy attribute-->
-                    <figcaption>
-                        Caribbean Beach Getaway
-                    </figcaption> <!-- The figcaption block tells the browser and assistive technology
-                     that this text directly relates to the image, if we use a paragraph instead it still
-                     might look okay but the browser or assistive technology will not know that it is
-                     meant to relate directly to the image-->
-                </figure> <!--The figure block indents the image-->
-            </li>
-            <li>
-                <p>I've heard good things about going here:</p>
-                <address>
-                    Margaritaville Island Reserve Riviera
-                    Cancún<br>
-                    Bahia Petempich Puerto Morelos,
-                    Mexico<br>
-                    Colonia Morelos, México 77580
-                </address>
-                <figure>
-                    <img src="img/vacation.jpg" alt="Cancún Vacation" title="It's 5 o'Clock Somewhere!"
-                         width="400" height="267"
-                    loading="lazy">
-                    <figcaption>
-                        A Caribbean Vacation Image
-                    </figcaption>
-                </figure>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <p>I've heard good things about the Caribbean.</p>
+                    <figure>
+                        <img src="img/caribbean.jpg" alt="Caribbean Beach"
+                             title="I want to visit a Caribbean beach" width="400" height="225"
+                        loading="lazy"> <!-- For the loading attribute, the default is eager, therefore
+                     if nothing is provided the image is eagerly loaded.
+                     In order to improve performance of the webpage, any image which is under the fold
+                     (the fold is the point in the webpage where the other elements are not seen,
+                     for example when you load the page the images which you need to scroll in order
+                     to see are under the fold) should be loaded using the lazy attribute-->
+                        <figcaption>
+                            Caribbean Beach Getaway
+                        </figcaption> <!-- The figcaption block tells the browser and assistive technology
+                         that this text directly relates to the image, if we use a paragraph instead it still
+                         might look okay but the browser or assistive technology will not know that it is
+                         meant to relate directly to the image-->
+                    </figure> <!--The figure block indents the image-->
+                </li>
+                <li>
+                    <p>I've heard good things about going here:</p>
+                    <address>
+                        Margaritaville Island Reserve Riviera
+                        Cancún<br>
+                        Bahia Petempich Puerto Morelos,
+                        Mexico<br>
+                        Colonia Morelos, México 77580
+                    </address>
+                    <figure>
+                        <img src="img/vacation.jpg" alt="Cancún Vacation" title="It's 5 o'Clock Somewhere!"
+                             width="400" height="267"
+                        loading="lazy">
+                        <figcaption>
+                            A Caribbean Vacation Image
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
 
-        <!--TODO: Add more places-->
-        <!--Don't put anything valuable here, the public can access comments-->
+            <!--TODO: Add more places-->
+            <!--Don't put anything valuable here, the public can access comments-->
 
-        <h3>Places I Want to Avoid</h3>
+            <h3>Places I Want to Avoid</h3>
 
-        <dl>
-            <dt>North Pole</dt>
-            <dd>I hear this is <strong>cold</strong>!</dd>
+            <dl>
+                <dt>North Pole</dt>
+                <dd>I hear this is <strong>cold</strong>!</dd>
 
-            <dt>South Pole</dt>
-            <dd>This is also cold.</dd>
+                <dt>South Pole</dt>
+                <dd>This is also cold.</dd>
 
-            <dt>Mountain Tops</dt>
-            <dd>These are also cold</dd>
-        </dl>
+                <dt>Mountain Tops</dt>
+                <dd>These are also cold</dd>
+            </dl>
 
-        <p>Anywhere cold. <strong>No way!</strong></p>
-    </section>
+            <p>Anywhere cold. <strong>No way!</strong></p>
+        </section>
+    </main>
 
     <hr>
 
