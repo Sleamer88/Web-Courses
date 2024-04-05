@@ -311,9 +311,22 @@
                 </p>
                 <p>
                     <label for="decade">Favorite Decade:</label>
-                    <input type="number" name="decade" id="decade" min="1950" max="2024"
-                    step="10"> <!-- The min and max are self-explanatory and the step is the iteration which
-                    the user can move by-->
+                    <input type="number" name="decade" id="decade" min="1950" max="2020"
+                    step="10" value="1980"> <!-- The min and max are self-explanatory and the step is the
+                    iteration which the user can move by-->
+                </p>
+                <p>
+                    <label for="coffee">Favorite Coffee:</label>
+                    <select name="coffee" id="coffee">
+                        <option value="regular coffee">Regular Coffee</option>
+                        <option value="iced coffee">Iced Coffee</option>
+                        <option value="latte" selected>Latte</option> <!-- Selected displays the option as the
+                        first choice in the dropdown menu-->
+                        <option value="cappuccino">Cappuccino</option>
+                        <option value="cortado">Cortado</option>
+                        <option value="americano">Americano</option>
+                        <option value="other">Other</option>
+                    </select>
                 </p>
             </form>
         </article>
