@@ -279,12 +279,15 @@
                 <label for="firstName">First Name:</label> <!-- For the label block we make the first label
                 of the input-->
                 <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane Doe"
-                autocomplete="on"> <!-- In this case the id must match the for attribute in the label block,
+                autocomplete="on" required autofocus> <!-- In this case the id must match the for attribute in the label block,
                 the name should match but is not required as it is being sent to the server, therefore that is
                 what the server will see this form's name as, and the type is usually given by context, the
                 autocomplete attribute expects on/off as its value, but turning it on, it will remember the
                 other inputs that have been entered into this field and suggest those if the user fills the form
-                out once and then again later-->
+                out once and then again later. The required attribute is a true/false attribute, but we do not have
+                to set it equal to anything since it is true by default. Only a single element in the page may have
+                autofocus because more than a single element cannot be focused, when the page loads the focus will
+                be on the input of the form, thus giving it a blue highlight when selected-->
             </form>
         </article>
 
