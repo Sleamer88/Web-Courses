@@ -276,18 +276,24 @@
             <form action="https://httpbin.org/get" method="get"> <!-- For the form we need to specify the
             place where we will store the info as the action, the last slash of the action is usually the
             method of the form as specified directly after, this tells the form what to do with the data-->
-                <label for="firstName">First Name:</label> <!-- For the label block we make the first label
-                of the input-->
-                <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane Doe"
-                autocomplete="on" required autofocus> <!-- In this case the id must match the for attribute in the label block,
-                the name should match but is not required as it is being sent to the server, therefore that is
-                what the server will see this form's name as, and the type is usually given by context, the
-                autocomplete attribute expects on/off as its value, but turning it on, it will remember the
-                other inputs that have been entered into this field and suggest those if the user fills the form
-                out once and then again later. The required attribute is a true/false attribute, but we do not have
-                to set it equal to anything since it is true by default. Only a single element in the page may have
-                autofocus because more than a single element cannot be focused, when the page loads the focus will
-                be on the input of the form, thus giving it a blue highlight when selected-->
+                <p>
+                    <label for="firstName">First Name:</label> <!-- For the label block we make the first label
+                    of the input-->
+                    <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane"
+                    autocomplete="on" required autofocus> <!-- In this case the id must match the for attribute in the label block,
+                    the name should match but is not required as it is being sent to the server, therefore that is
+                    what the server will see this form's name as, and the type is usually given by context, the
+                    autocomplete attribute expects on/off as its value, but turning it on, it will remember the
+                    other inputs that have been entered into this field and suggest those if the user fills the form
+                    out once and then again later. The required attribute is a true/false attribute, but we do not have
+                    to set it equal to anything since it is true by default. Only a single element in the page may have
+                    autofocus because more than a single element cannot be focused, when the page loads the focus will
+                    be on the input of the form, thus giving it a blue highlight when selected-->
+                </p> <!-- Using p gives a line break with space between the inputs, but using div looks nicer with
+                no space between the inputs as a form usually is like-->
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="e.g. Doe"
+                autocomplete="on" required>
             </form>
         </article>
 
