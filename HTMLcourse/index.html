@@ -276,80 +276,81 @@
             <form action="https://httpbin.org/get" method="get"> <!-- For the form we need to specify the
             place where we will store the info as the action, the last slash of the action is usually the
             method of the form as specified directly after, this tells the form what to do with the data-->
-                <p>
-                    <label for="firstName">First Name:</label> <!-- For the label block we make the first label
-                    of the input-->
-                    <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane"
-                    autocomplete="on" required autofocus> <!-- In this case the id must match the for attribute in the label block,
-                    the name should match but is not required as it is being sent to the server, therefore that is
-                    what the server will see this form's name as, and the type is usually given by context, the
-                    autocomplete attribute expects on/off as its value, but turning it on, it will remember the
-                    other inputs that have been entered into this field and suggest those if the user fills the form
-                    out once and then again later. The required attribute is a true/false attribute, but we do not have
-                    to set it equal to anything since it is true by default. Only a single element in the page may have
-                    autofocus because more than a single element cannot be focused, when the page loads the focus will
-                    be on the input of the form, thus giving it a blue highlight when selected-->
-                </p> <!-- Using p gives a line break with space between the inputs, but using div looks nicer with
-                no space between the inputs as a form usually is like-->
-                <p>
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" name="lastName" id="lastName" placeholder="e.g. Doe"
-                    autocomplete="on" required>
-                </p>
-                <p>
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" placeholder="e.g. your secret"
-                           required> <!-- The autocomplete attribute is not supported on a password
-                    input, thus it cannot be used-->
-                </p>
-                <p>
-                    <label for="mobile">Mobile:</label>
-                    <input type="tel" name="mobile" id="mobile" placeholder="e.g. 0689275989"
-                           pattern="[0-9]{10}" required> <!-- The pattern attribute supports regular expression
-                           patterns. In the video he used the example number 9999999999 and therefore
-                           his regular expression pattern was pattern="[0-9]{3}[0-9]{3}[0-9]{4}"-->
-                </p>
-                <p>
-                    <label for="decade">Favorite Decade:</label>
-                    <input type="number" name="decade" id="decade" min="1950" max="2020"
-                    step="10" value="1980"> <!-- The min and max are self-explanatory and the step is the
-                    iteration which the user can move by-->
-                </p>
-                <p>
-                    <label for="coffee">Favorite Coffee:</label>
-                    <select name="coffee" id="coffee" multiple size="5"> <!-- The multiple attribute allows
-                    for multiple options to be selected, the size attribute says how many from the list
-                    will display on page at once-->
-                        <optgroup label="Most popular">
-                            <option value="regular coffee">Regular Coffee</option>
-                            <option value="iced coffee">Iced Coffee</option>
-                        </optgroup>
-                        <optgroup label="Fancy coffees">
-                            <option value="latte" selected>Latte</option> <!-- Selected displays the option as the
-                            first choice in the dropdown menu-->
-                            <option value="cappuccino">Cappuccino</option>
-                            <option value="cortado">Cortado</option>
-                            <option value="americano">Americano</option>
-                        </optgroup>
-                            <option value="other">Other</option>
-                    </select>
-                </p>
+                <fieldset>
+                    <p>
+                        <label for="firstName">First Name:</label> <!-- For the label block we make the first label
+                        of the input-->
+                        <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane"
+                        autocomplete="on" required autofocus> <!-- In this case the id must match the for attribute in the label block,
+                        the name should match but is not required as it is being sent to the server, therefore that is
+                        what the server will see this form's name as, and the type is usually given by context, the
+                        autocomplete attribute expects on/off as its value, but turning it on, it will remember the
+                        other inputs that have been entered into this field and suggest those if the user fills the form
+                        out once and then again later. The required attribute is a true/false attribute, but we do not have
+                        to set it equal to anything since it is true by default. Only a single element in the page may have
+                        autofocus because more than a single element cannot be focused, when the page loads the focus will
+                        be on the input of the form, thus giving it a blue highlight when selected-->
+                    </p> <!-- Using p gives a line break with space between the inputs, but using div looks nicer with
+                    no space between the inputs as a form usually is like-->
+                    <p>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="e.g. Doe"
+                        autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" placeholder="e.g. your secret"
+                               required> <!-- The autocomplete attribute is not supported on a password
+                        input, thus it cannot be used-->
+                    </p>
+                    <p>
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" name="mobile" id="mobile" placeholder="e.g. 0689275989"
+                               pattern="[0-9]{10}" required> <!-- The pattern attribute supports regular expression
+                               patterns. In the video he used the example number 9999999999 and therefore
+                               his regular expression pattern was pattern="[0-9]{3}[0-9]{3}[0-9]{4}"-->
+                    </p>
+                    <p>
+                        <label for="decade">Favorite Decade:</label>
+                        <input type="number" name="decade" id="decade" min="1950" max="2020"
+                        step="10" value="1980"> <!-- The min and max are self-explanatory and the step is the
+                        iteration which the user can move by-->
+                    </p>
+                    <p>
+                        <label for="coffee">Favorite Coffee:</label>
+                        <select name="coffee" id="coffee" multiple size="5"> <!-- The multiple attribute allows
+                        for multiple options to be selected, the size attribute says how many from the list
+                        will display on page at once-->
+                            <optgroup label="Most popular">
+                                <option value="regular coffee">Regular Coffee</option>
+                                <option value="iced coffee">Iced Coffee</option>
+                            </optgroup>
+                            <optgroup label="Fancy coffees">
+                                <option value="latte" selected>Latte</option> <!-- Selected displays the option as the
+                                first choice in the dropdown menu-->
+                                <option value="cappuccino">Cappuccino</option>
+                                <option value="cortado">Cortado</option>
+                                <option value="americano">Americano</option>
+                            </optgroup>
+                                <option value="other">Other</option>
+                        </select>
+                    </p>
 
-                <!-- Option command backslash comments selected code-->
+                    <!-- Option command backslash comments selected code-->
 
-                <p>
-                    <label for="other coffee">Favorite Coffee</label>
-                    <input type="text" name="other coffee" id="other coffee" list="other-coffee-list">
-                    <datalist id="other-coffee-list">
-                        <option value="coffee">
-                        <option value="latte">
-                        <option value="espresso">
-                        <option value="cortado">
-                        <option value="americano">
-                        <option value="other">
-                    </datalist>
-                </p> <!-- This is another way of doing the code commented above-->
-
+                    <p>
+                        <label for="other coffee">Favorite Coffee</label>
+                        <input type="text" name="other coffee" id="other coffee" list="other-coffee-list">
+                        <datalist id="other-coffee-list">
+                            <option value="coffee">
+                            <option value="latte">
+                            <option value="espresso">
+                            <option value="cortado">
+                            <option value="americano">
+                            <option value="other">
+                        </datalist>
+                    </p> <!-- This is another way of doing the code commented above-->
+                </fieldset>
             </form>
         </article>
 
