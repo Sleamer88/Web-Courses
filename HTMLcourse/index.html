@@ -397,8 +397,17 @@
                     <label for="message">Your Message:</label>
                     <br>
                     <textarea name="message" id="message" cols="30" rows="10"
-                    placeholder="Type your message here"></textarea>
+                    placeholder="Type your message here"></textarea><!-- I didn't add anything in the
+                    textarea block since it would consider it as a value that the user typed and would
+                    make it annoying to have to delete that text when filling in the form-->
                 </fieldset>
+                <br>
+                <!--<input type="submit" value="">--> <!-- This is also an option for a button, but is not
+                as commonly used due ot restricted attributes-->
+                <button type="submit">Submit</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                <!-- There can be multiple submit buttons per form-->
+                <button type="reset">Reset</button>
             </form>
         </article>
 
