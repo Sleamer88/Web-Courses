@@ -21,6 +21,9 @@
                 <li>
                     <a href="#vacation">Planning a Vacation</a>
                 </li>
+                <li>
+                    <a href="#contact">Contact Me</a>
+                </li>
             </ul> <!-- This is also semantic HTML-->
         </nav> <!-- This is also semantic HTML, and there can be multiple nav headers per webpage
         (These usually also exist in the footers), if there are multiple nav elements it is very
@@ -263,6 +266,28 @@
                 <p>Anywhere cold. <strong>No way!</strong></p>
             </section>
         </article>
+
+        <hr>
+
+        <article id="contact">
+            <h2>Contact Me</h2>
+            <p>I'd really like to hear from you.</p>
+
+            <form action="https://httpbin.org/get" method="get"> <!-- For the form we need to specify the
+            place where we will store the info as the action, the last slash of the action is usually the
+            method of the form as specified directly after, this tells the form what to do with the data-->
+                <label for="firstName">First Name:</label> <!-- For the label block we make the first label
+                of the input-->
+                <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane Doe"
+                autocomplete="on"> <!-- In this case the id must match the for attribute in the label block,
+                the name should match but is not required as it is being sent to the server, therefore that is
+                what the server will see this form's name as, and the type is usually given by context, the
+                autocomplete attribute expects on/off as its value, but turning it on, it will remember the
+                other inputs that have been entered into this field and suggest those if the user fills the form
+                out once and then again later-->
+            </form>
+        </article>
+
     </main> <!-- There can only be a single main section per page which is obvious, this usually
      encloses the sections of the webpage (semantic HTML)-->
 
