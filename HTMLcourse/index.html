@@ -291,9 +291,30 @@
                     be on the input of the form, thus giving it a blue highlight when selected-->
                 </p> <!-- Using p gives a line break with space between the inputs, but using div looks nicer with
                 no space between the inputs as a form usually is like-->
-                <label for="lastName">Last Name:</label>
-                <input type="text" name="lastName" id="lastName" placeholder="e.g. Doe"
-                autocomplete="on" required>
+                <p>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="e.g. Doe"
+                    autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="e.g. your secret"
+                           required> <!-- The autocomplete attribute is not supported on a password
+                    input, thus it cannot be used-->
+                </p>
+                <p>
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" name="mobile" id="mobile" placeholder="e.g. 0689275989"
+                           pattern="[0-9]{10}" required> <!-- The pattern attribute supports regular expression
+                           patterns. In the video he used the example number 9999999999 and therefore
+                           his regular expression pattern was pattern="[0-9]{3}[0-9]{3}[0-9]{4}"-->
+                </p>
+                <p>
+                    <label for="decade">Favorite Decade:</label>
+                    <input type="number" name="decade" id="decade" min="1950" max="2024"
+                    step="10"> <!-- The min and max are self-explanatory and the step is the iteration which
+                    the user can move by-->
+                </p>
             </form>
         </article>
 
