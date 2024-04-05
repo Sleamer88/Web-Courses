@@ -317,7 +317,9 @@
                 </p>
                 <p>
                     <label for="coffee">Favorite Coffee:</label>
-                    <select name="coffee" id="coffee">
+                    <select name="coffee" id="coffee" multiple size="5"> <!-- The multiple attribute allows
+                    for multiple options to be selected, the size attribute says how many from the list
+                    will display on page at once-->
                         <optgroup label="Most popular">
                             <option value="regular coffee">Regular Coffee</option>
                             <option value="iced coffee">Iced Coffee</option>
@@ -330,10 +332,11 @@
                             <option value="americano">Americano</option>
                         </optgroup>
                             <option value="other">Other</option>
-
-
                     </select>
                 </p>
+
+                <!-- Option command backslash comments selected code-->
+
             </form>
         </article>
 
